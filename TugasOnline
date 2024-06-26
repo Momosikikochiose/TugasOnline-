@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerja Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header, nav, section {
+      padding: 20px;
+      margin: 10px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    const translations = {
+      id: {
+        heroTitle: "Dapatkan Penghasilan Tambahan dengan Menyelesaikan Tugas Online",
+        heroDescription: "Selesaikan tugas sederhana dan dapatkan penghasilan hingga Rp 10.000 per tugas. Mulai sekarang dan tarik uang Anda saat mencapai Rp 100.000.",
+        startNow: "Mulai Sekarang",
+        aboutUs: "Tentang Kami",
+        aboutDescription: "Kami adalah platform yang menyediakan peluang kerja online dengan tugas sederhana dan komisi yang menarik.",
+        mission: "Misi Kami",
+        missionDescription: "Memberikan peluang kerja yang mudah diakses bagi semua orang.",
+        vision: "Visi Kami",
+        visionDescription: "Menjadi platform kerja online terdepan yang terpercaya.",
+        howItWorks: "Cara Kerja",
+        step1: "Daftar dan Deposit",
+        step1Description: "Daftar akun gratis dan lakukan deposit Rp 40.000 untuk membangun kepercayaan dan membuka akses ke tugas-tugas.",
+        step2: "Pilih Tugas",
+        step2Description: "Pilih tugas yang tersedia sesuai minat Anda.",
+        step3: "Selesaikan Tugas",
+        step3Description: "Selesaikan tugas dan dapatkan komisi hingga Rp 10.000 per tugas.",
+        step4: "Tarik Penghasilan",
+        step4Description: "Tarik penghasilan Anda ketika sudah mencapai Rp 100.000.",
+        faq: "FAQ",
+        faqQuestion: "Kenapa harus deposit Rp 40.000?",
+        faqAnswer: "Deposit ini digunakan untuk membangun kepercayaan dan membuka akses ke tugas-tugas yang tersedia.",
+        selectLanguage: "Pilih Bahasa"
+      },
+      en: {
+        heroTitle: "Earn Extra Income by Completing Online Tasks",
+        heroDescription: "Complete simple tasks and earn up to Rp 10,000 per task. Start now and withdraw your money when you reach Rp 100,000.",
+        startNow: "Start Now",
+        aboutUs: "About Us",
+        aboutDescription: "We are a platform providing online job opportunities with simple tasks and attractive commissions.",
+        mission: "Our Mission",
+        missionDescription: "Providing easily accessible job opportunities for everyone.",
+        vision: "Our Vision",
+        visionDescription: "To become the leading and trusted online job platform.",
+        howItWorks: "How It Works",
+        step1: "Register and Deposit",
+        step1Description: "Register for a free account and make a deposit of Rp 40,000 to build trust and unlock access to tasks.",
+        step2: "Choose Tasks",
+        step2Description: "Choose available tasks according to your interests.",
+        step3: "Complete Tasks",
+        step3Description: "Complete tasks and earn up to Rp 10,000 per task.",
+        step4: "Withdraw Earnings",
+        step4Description: "Withdraw your earnings when you reach Rp 100,000.",
+        faq: "FAQ",
+        faqQuestion: "Why do I need to deposit Rp 40,000?",
+        faqAnswer: "This deposit is used to build trust and unlock access to available tasks.",
+        selectLanguage: "Select Language"
+      }
+    };
+
+    function changeLanguage(language) {
+      document.getElementById('hero-title').innerText = translations[language].heroTitle;
+      document.getElementById('hero-description').innerText = translations[language].heroDescription;
+      document.getElementById('start-now').innerText = translations[language].startNow;
+      document.getElementById('about-us').innerText = translations[language].aboutUs;
+      document.getElementById('about-description').innerText = translations[language].aboutDescription;
+      document.getElementById('mission').innerText = translations[language].mission;
+      document.getElementById('mission-description').innerText = translations[language].missionDescription;
+      document.getElementById('vision').innerText = translations[language].vision;
+      document.getElementById('vision-description').innerText = translations[language].visionDescription;
+      document.getElementById('how-it-works').innerText = translations[language].howItWorks;
+      document.getElementById('step1').innerText = translations[language].step1;
+      document.getElementById('step1-description').innerText = translations[language].step1Description;
+      document.getElementById('step2').innerText = translations[language].step2;
+      document.getElementById('step2-description').innerText = translations[language].step2Description;
+      document.getElementById('step3').innerText = translations[language].step3;
+      document.getElementById('step3-description').innerText = translations[language].step3Description;
+      document.getElementById('step4').innerText = translations[language].step4;
+      document.getElementById('step4-description').innerText = translations[language].step4Description;
+      document.getElementById('faq').innerText = translations[language].faq;
+      document.getElementById('faq-question').innerText = translations[language].faqQuestion;
+      document.getElementById('faq-answer').innerText = translations[language].faqAnswer;
+      document.getElementById('select-language').innerText = translations[language].selectLanguage;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      changeLanguage('id'); // Set default language to Indonesian
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="#how-it-works">Cara Kerja</a></li>
+        <li><a href="#language">Bahasa</a></li>
+        <li><a href="#login">Login/Daftar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1 id="hero-title"></h1>
+    <p id="hero-description"></p>
+    <button id="start-now" onclick="location.href='#register'"></button>
+  </section>
+
+  <section id="about">
+    <h2 id="about-us"></h2>
+    <p id="about-description"></p>
+    <h3 id="mission"></h3>
+    <p id="mission-description"></p>
+    <h3 id="vision"></h3>
+    <p id="vision-description"></p>
+  </section>
+
+  <section id="how-it-works">
+    <h2 id="how-it-works"></h2>
+    <ol>
+      <li><strong id="step1"></strong>: <span id="step1-description"></span></li>
+      <li><strong id="step2"></strong>: <span id="step2-description"></span></li>
+      <li><strong id="step3"></strong>: <span id="step3-description"></span></li>
+      <li><strong id="step4"></strong>: <span id="step4-description"></span></li>
+    </ol>
+    <h3 id="faq"></h3>
+    <p><strong id="faq-question"></strong> <span id="faq-answer"></span></p>
+  </section>
+
+  <section id="language">
+    <label for="language-select" id="select-language"></label>
+    <select id="language-select" onchange="changeLanguage(this.value)">
+      <option value="id">Bahasa Indonesia</option>
+      <option value="en">English</option>
+    </select>
+  </section>
+</body>
+</html>
